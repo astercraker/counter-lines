@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Lines</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<style>
+body {
+  background-color: #eee;
+  color: #555;
+}
+pre {
+  font-family: monospace;
+  background-color: #fff;
+  width: 27.5em;
+  margin: 4em auto;
+  padding: 0.5em;
+  border-radius: .25em;
+  box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.45);
+  line-height: 0;
+  counter-reset: line;
+  position: relative;
+  min-height: 100px;
+}
+pre div {
+  display: block;
+  line-height: 1.5rem;
+  height: 20px;
+}
+pre div:before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  padding: 0 .5em;
+  margin-right: .5em;
+  color: #888;
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  background-color: green;
+  font-size: 20px;
+  color: white;
+}
+</style>
+<body>
+    <div class="container">
+        <pre contenteditable="true">
+            <div>Hola</div>
+        </pre>
+    </div>
+</body>
+</html>
