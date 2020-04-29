@@ -23,14 +23,15 @@ pre {
   counter-reset: line;
   position: relative;
   min-height: 100px;
+  outline: none;
 }
 pre div {
   display: block;
   line-height: 1.5rem;
   height: 20px;
+  counter-increment: line;
 }
 pre div:before {
-  counter-increment: line;
   content: counter(line);
   display: inline-block;
   border-right: 1px solid #ddd;
@@ -48,7 +49,7 @@ pre div:before {
 <body>
     <div class="container">
         <pre contenteditable="true">
-            <div>Hola</div>
+            <div>HOLA</div>
         </pre>
     </div>
 </body>
